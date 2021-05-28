@@ -1,0 +1,210 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    height: 100vh;
+}
+
+header {
+    margin-top: 70px;
+    margin-bottom: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-heading {
+    width: 100%;
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.045em;
+    padding-left: 1.5rem;
+    width: 50vw;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25vw;
+}
+
+.subheading {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: uppercase;
+    margin: 20px 0 0 0;
+}
+
+.description {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 10px 0 20px 0;
+}
+
+.wrapper {
+    padding: 0 0 0 13rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "img1 . img3"
+        "img1 img2 img3"
+        "img1 img2 img3"
+        "img1 img2 img3"
+        ". img2 ."
+        "img4 . img6"
+        "img4 img5 img6"
+        "img4 img5 img6"
+        "img4 img5 img6"
+        ". img5 .";
+}
+
+
+.container {
+    position: relative;
+    padding: 0.2rem 1rem;
+
+}
+
+.image1 {
+    grid-area: img1;
+}
+
+.image2 {
+    grid-area: img2;
+}
+
+.image3 {
+    grid-area: img3;
+}
+
+.image4 {
+    grid-area: img4;
+}
+
+.image5 {
+    grid-area: img5;
+}
+
+.image6 {
+    grid-area: img6;
+}
+
+.container img {
+    width: 240px;
+    height: 360px;
+}
+
+
+.work {
+    font-family: PT Serif;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    position: absolute;
+    width: 100%;
+    transform-origin: top left;
+    transform: rotate(90deg);
+    margin-left: 1.5rem;
+
+}
+
+.name {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+
+/* footer */
+footer {
+    position: relative;
+    left: 0;
+    bottom: -50px;
+    width: 100%;
+    text-align: center;
+}
+
+.attribution {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #BDBDBD;
+}
+
+.attribution>a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #BDBDBD;
+}
+
+@media only screen and (max-width: 625px) {
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 25px 0 25px;
+        margin-bottom: 25px;
+    }
+
+    .main-heading {
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .subheading {
+        font-size: 12px;
+        margin-top: 0;
+    }
+
+    .description {
+        font-size: 8px;
+        line-height: 12px;
+        width: 70vw;
+        margin-top: 0;
+    }
+
+    .name {
+        font-size: 10px;
+    }
+
+    .work {
+        font-size: 10px;
+    }
+
+    .wrapper {
+        padding: 0;
+        margin: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "img1 img2";
+    }
+
+    .container img {
+        width: 100px;
+        height: 145px;
+    }
+
+}
